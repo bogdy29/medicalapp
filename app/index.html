@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html lang="en" ng-app="myApp" class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html lang="en" ng-app="myApp" class="no-js"> <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>Medvision</title> 
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="/bower_components/html5-boilerplate/dist/css/normalize.css">
+  <link rel="stylesheet" href="/bower_components/html5-boilerplate/dist/css/main.css">
+  <link rel="stylesheet" href="/bower_components/bootstrap/dist/css/bootstrap.css">
+  <link rel="stylesheet" href="styles/app.css">
+  <link rel="stylesheet" href="/bower_components/nvd3/build/nv.d3.css">
+</head>
+<body>
+
+<div class="container" ng-controller="appCtrl">
+	<div class="col-xs-12">
+		<div class="row">
+			<div class="col-xs-12 text-center">
+				<h1>Medvision 360</h1>	
+			</div>
+		</div>
+	</div>
+	<div class="col-xs-12">
+		<div class="pull-right">
+			<button class="btn" ng-click="changeLanguage('en')">English</button>
+			<button class="btn" ng-click="changeLanguage('de')">German</button>
+		</div>
+	</div>
+	<ul class="menu">
+		<li>
+			<a href="#!/report">Reports</a>
+		</li>
+	</ul>
+	<div ng-view></div>
+</div>
+
+  <!-- In production use:
+  <script src="//ajax.googleapis.com/ajax/libs/angularjs/x.x.x/angular.min.js"></script>
+  -->
+  <script src="/bower_components/angular/angular.js"></script>
+  <script src="/bower_components/angular-route/angular-route.js"></script>
+  
+  <script src="/bower_components/angular-translate/angular-translate.js"></script>
+  <script src="/bower_components/angular-cookies/angular-cookies.js"></script>
+  <script src="/bower_components/angular-translate-loader-static-files/angular-translate-loader-static-files.js"></script>
+  <script src="/bower_components/angular-translate-storage-cookie/angular-translate-storage-cookie.js"></script>
+  <script src="/bower_components/angular-translate-storage-local/angular-translate-storage-local.js"></script>
+  <script src="/bower_components/moment/moment.js"></script>
+  <script src="/bower_components/moment/locale/de.js"></script>
+  <script src="/bower_components/angular-moment/angular-moment.js"></script>
+  <script src="/bower_components/html5-boilerplate/dist/js/vendor/modernizr-2.8.3.min.js"></script>
+  <script src="/bower_components/d3/d3.js"></script>
+  <script src="/bower_components/nvd3/build/nv.d3.js"></script> <!-- or use another assembly -->
+  <script src="/bower_components/angular-nvd3/dist/angular-nvd3.js"></script>
+  <script src="app.js"></script>
+  <script src="common/RestService.js"></script>
+  <script src="features/report/report.js"></script>
+</body>
+</html>
